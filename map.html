@@ -1,0 +1,118 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>
+      
+    </title>
+    <link type="text/css" rel="stylesheet" href="./reset.css"> 
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/node_modules/bxslider/dist/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+
+
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider();
+  });
+</script>
+    
+    </head>
+
+    
+<body class="page-home page-1colum">
+    
+
+<!--ヘッダー-->
+
+<header class="js-float-menu">
+    <div class="container-maintitle">
+        <h1><a href="index2.php" >NF Plaza</a></h1>
+        <p>練馬高野台駅前の賃貸レジデンス</p>
+        <nav></nav>
+    </div>
+</header>
+
+<!--メイン-->
+
+
+<section id="index" class="index">
+ <div class="container-panels">
+    <div class="index-panel"><a href="index.html"><p>TOP</p></a></div>
+    <div class="index-panel"><a href="roomplan.html"><p>ROOM PLAN</p></a></div>
+    <div class="index-panel"><a href="access.html"><p>ACCESS/LOCATION</p></a></div>
+    <div class="index-panel"><a href="gallery.html"><p>GALLERY</p></a></div>
+    <div class="index-panel"><a href="outline.html"><p>OUTLINE</p></a></div>
+    <div class="index-panel"><a href="map.html"><p>MAP</p></a></div>
+ </div>
+                        
+    
+</section>
+    
+    
+<section id="main">
+   <div class="container">
+       <h2 class="container-title"><span>MAP</span><br>
+       </h2>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d756.9045038988888!2d139.61638896528598!3d35.74134730111344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1578900194467!5m2!1sja!2sjp" width="900" height="650" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+      </div>
+    
+</section>
+
+
+<div class='inner'>
+    <div class='contact'>
+        <p style='font-size: 10px;'>お電話での問い合わせは<br>※※※※※※※※※※※まで<br>お気軽にお電話下さい。</p>
+        <p> TEL ※※※-※※※※※-※※※※</p>
+        <p   style='font-size:20px; color:white; height:50px; width:120px; border:1px solid black; background-color: blue;'><span>空室情報</span></p>
+    </div>
+
+</div>
+
+      
+
+    </body>
+
+<!-- footer -->
+<footer id='footer' class="site_footer">
+     <nav>
+      <ul class="fnav">
+             <li><a href="index.html">トップ </a></li>
+             <li><a href="page/roomplan.html">間取り </a></li>
+             <li><a href="page/equipment.html">設備仕様 </a></li>
+             <li><a href="page/access.html">アクセス/周辺環境 </a></li>
+             <li><a href="page/gallery.html">ギャラリー </a></li>
+             <li><a href="page/outline.html">物件概要 </a></li>
+             <li><a href="page/map.html">現地案内図 </a></li>
+        </ul>
+    　</nav>
+                
+</footer>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+></script>
+<script src="js/app.js"></script>
+<script>
+    $(function(){
+        var $ftr = $('#footer');
+        if(window.innerHeight > $ftr.offset().top+$ftr.outerHeight()){
+            $ftr.attr({'style':'position:fixed; top:'+
+                      (window.innerHeight - $ftr.outerHeight())+'px;'});
+        }       
+        
+        
+        
+    })
+    
+    </script>
+    

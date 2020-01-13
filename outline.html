@@ -1,0 +1,182 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>
+      
+    </title>
+    <link type="text/css" rel="stylesheet" href="./reset.css"> 
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    </head>
+
+    
+<body class="page-home page-1colum">
+    
+
+<!--ヘッダー-->
+
+<header class="js-float-menu">
+    <div class="container-maintitle">
+        <h1><a href="index2.php" >NF Plaza</a></h1>
+        <p>練馬高野台駅前の賃貸レジデンス</p>
+        <nav></nav>
+    </div>
+</header>
+
+<!--メイン-->
+
+
+<section id="index" class="index">
+ <div class="container-panels">
+    <div class="index-panel"><a href="index.html"><p>TOP</p></a></div>
+    <div class="index-panel"><a href="roomplan.html"><p>ROOM PLAN</p></a></div>
+    <div class="index-panel"><a href="access.html"><p>ACCESS/LOCATION</p></a></div>
+    <div class="index-panel"><a href="gallery.html"><p>GALLERY</p></a></div>
+    <div class="index-panel"><a href="outline.html"><p>OUTLINE</p></a></div>
+    <div class="index-panel"><a href="map.html"><p>MAP</p></a></div>
+ </div>
+                        
+    
+</section>
+    
+    
+<section id="main">
+   <div class="container">
+       <h2 class="container-title"><span>OUTLINE</span><br>
+       </h2>
+       
+       <table id="outlineTbl">
+            <tbody><tr>
+                <th>名称</th>
+                <td>ルフォンプログレ 中野富士見町</td>
+            </tr>
+           
+            <tr>
+                <th>所在地</th>
+                <td>東京都杉並区和田二丁目3番11号</td>
+            </tr>
+            <tr>
+                <th>交通</th>
+                <td>
+                東京メトロ丸ノ内線「中野富士見町」駅徒歩7分、「方南町」駅徒歩9分
+                </td>
+            </tr>
+            <!--tr>
+                <th>敷地面積</th>
+                <td>741.78㎡（224.39坪）</td>
+            </tr>
+            <tr class="line">
+                <td colspan="2">&nbsp;</td>
+            </tr-->
+            <!--tr>
+                <th>建築延床面積</th>
+                <td>1,782.25㎡（539.13坪）</td>
+            </tr>
+            <tr class="line">
+                <td colspan="2">&nbsp;</td>
+            </tr-->
+            <tr>
+                <th>構造 ・ 規模</th>
+                <td>鉄筋コンクリート造地上6階建て</td>
+            </tr>
+            <tr>
+                <th>総戸数</th>
+                <td>46戸</td>
+            </tr>
+
+            <tr>
+                <th>間取り</th>
+                <td>STUDIO・1K・1DK・1LDK・2LDK / 26.13㎡～50.52㎡</td>
+            </tr>
+            <tr>
+                <th>竣工日</th>
+                <td>平成28年8月31日</td>
+            </tr>
+            </tr>
+            <tr>
+                <th>入居開始</th>
+                <td>平成28年9月1日</td>
+            </tr>
+            <tr>
+                <th>駐車場</th>
+                <td>4台</td> 
+            </tr>
+            <!--tr class="line">
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>ミニバイク置場</th>
+                <td>5台※空き状況・賃料等詳細はお問い合わせください。</td>
+            </tr-->
+        
+            <tr>
+                <th>駐輪場</th>
+                <td>50台</td>
+            </tr>
+
+
+
+                    </tbody></table>
+         
+        
+      </div>
+      </div>
+</div>
+    
+</section>
+
+
+<div class='inner'>
+    <div class='contact'>
+        <p style='font-size: 10px;'>お電話での問い合わせは<br>※※※※※※※※※※※まで<br>お気軽にお電話下さい。</p>
+        <p> TEL ※※※-※※※※※-※※※※</p>
+        <p   style='font-size:20px; color:white; height:50px; width:120px; border:1px solid black; background-color: blue;'><span>空室情報</span></p>
+    </div>
+
+</div>
+
+      
+
+    </body>
+
+<!-- footer -->
+<footer id='footer' class="site_footer">
+     <nav>
+      <ul class="fnav">
+             <li><a href="index.html">トップ </a></li>
+             <li><a href="page/roomplan.html">間取り </a></li>
+             <li><a href="page/equipment.html">設備仕様 </a></li>
+             <li><a href="page/access.html">アクセス/周辺環境 </a></li>
+             <li><a href="page/gallery.html">ギャラリー </a></li>
+             <li><a href="page/outline.html">物件概要 </a></li>
+             <li><a href="page/map.html">現地案内図 </a></li>
+        </ul>
+    　</nav>
+                
+</footer>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+></script>
+<script src="js/app.js"></script>
+<script>
+    $(function(){
+        var $ftr = $('#footer');
+        if(window.innerHeight > $ftr.offset().top+$ftr.outerHeight()){
+            $ftr.attr({'style':'position:fixed; top:'+
+                      (window.innerHeight - $ftr.outerHeight())+'px;'});
+        }       
+        
+        
+        
+    })
+    
+    </script>
+    
