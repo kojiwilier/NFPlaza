@@ -20,7 +20,13 @@
    
    <script>
      jQuery(function($){$(document).ready(function(){
-       $('.bxslider').bxSlider();
+       $('.bxslider').bxSlider({slideWidth: 1200, 
+       mode: 'fade',
+       auto: true,
+       pause:3000,
+       speed: 3000,
+       adaptiveHeight: true,
+       pagerCustom: '.custom-thumb' });
      });
     });
    </script>
@@ -67,6 +73,10 @@
            <li class='main-image'><img src="asset/neritaka.jpg" alt="none"></li>
        </ul>
          
+       <div class="custom-thumb">
+            <a data-slide-index="0" href="#"><img src="asset/nfplaza.jpeg" width="160px" height="100px" /></a>
+            <a data-slide-index="1" href="#"><img src="asset/neritaka.jpg" width="160px" height="100px" /></a>
+        </div>
         
       </div>
       </div>

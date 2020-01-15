@@ -8,6 +8,10 @@ html, body {
   text-size-adjust: 100%;
   letter-spacing: 0.1em; }
 
+body {
+  display: none;
+  background: #EEEEEE; }
+
 p, a {
   -webkit-font-smoothing: antialiased; }
 
@@ -21,9 +25,7 @@ a:hover {
 
 img {
   vertical-align: bottom;
-  max-width: 100%;
-  height: auto;
-  width: auto; }
+  max-width: 100%; }
 
 .site-title {
   justify-content: center;
@@ -61,7 +63,8 @@ header {
 
 .main-image {
   margin: 0 auto;
-  width: 1200px; }
+  width: 1200px;
+  height: 530px; }
 
 .panel__roomplan-left {
   margin-bottom: 20px;
@@ -95,6 +98,19 @@ header {
   .panel__gallery p {
     padding: 5px 20px; }
 
+.bx-wrapper .bx-pager a {
+  border: solid #ccc 1px;
+  display: block;
+  margin: 0 5px;
+  padding: 3px; }
+
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a.active {
+  border: solid #5280DD 1px; }
+
+.bx-wrapper {
+  margin-bottom: 50px; }
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -115,12 +131,14 @@ header {
     text-align: center;
     height: 50px; }
   .container__topimage {
-    margin: -60px auto 0; }
+    margin: 0 auto;
+    width: 1200px; }
   .container__roomplan {
     overflow: hidden;
     width: 960px;
     margin: 30px auto 50px; }
   .container__gallery {
+    width: 1200px;
     margin: 30px auto 0; }
 
 .inner {
