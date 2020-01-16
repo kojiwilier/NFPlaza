@@ -9,8 +9,7 @@ html, body {
   letter-spacing: 0.1em; }
 
 body {
-  display: none;
-  background: #EEEEEE; }
+  display: none; }
 
 p, a {
   -webkit-font-smoothing: antialiased; }
@@ -98,6 +97,20 @@ header {
   .panel__gallery p {
     padding: 5px 20px; }
 
+.absolute_test {
+  position: fixed;
+  background-color: blue;
+  padding: 20px;
+  left: 1100px;
+  top: 500px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle; }
+  .absolute_test p {
+    line-height: 80px; }
+
 .bx-wrapper .bx-pager a {
   border: solid #ccc 1px;
   display: block;
@@ -109,7 +122,10 @@ header {
   border: solid #5280DD 1px; }
 
 .bx-wrapper {
-  margin-bottom: 50px; }
+  margin: 0 auto 50px; }
+
+.bx-viewport {
+  width: 1200px; }
 
 .container {
   width: 100%;

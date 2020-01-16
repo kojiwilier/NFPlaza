@@ -26,7 +26,6 @@ html, body {
 
 body{
   display:none;
-	background: #EEEEEE;
 }
 
 p, a {
@@ -150,6 +149,27 @@ header {
 }
 
 
+//======================
+//TOPNAVI
+//======================
+.absolute_test {
+  position:  fixed;        
+  background-color: blue;     
+  padding:  20px;           
+  left:  1100px;                
+  top: 500px; 
+  width:80px;
+  height: 80px;
+  border-radius: 50%;        
+  text-align: center;
+  vertical-align: middle;
+  p{
+    line-height: 80px;
+  }
+  
+}
+
+
 //===================================
 //slider
 //===================================
@@ -167,11 +187,16 @@ header {
   }
   
   .bx-wrapper {
-  margin-bottom: 50px;
+  margin:0 auto 50px;
+  
   }
 
-
-
+  .bx-viewport{
+    width:1200px;
+  }
+  
+  
+  
     
 // ==================================
 // container
