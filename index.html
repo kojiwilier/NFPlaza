@@ -1,6 +1,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>
       
     </title>
@@ -20,20 +21,33 @@
    
    <script>
      jQuery(function($){$(document).ready(function(){
-       $('.bxslider').bxSlider({slideWidth: 1200, 
+       $('.bxslider').bxSlider({ 
        mode: 'fade',
        auto: true,
        pause:3000,
        speed: 3000,
        adaptiveHeight: true,
-       pagerCustom: '.custom-thumb' });
+       pagerCustom: '.custom-thumb',
+       responsive: true });
      });
     });
 
 
     $(document).ready(function() {
-    $('body').fadeIn(4000);
+    $('body').fadeIn(2000);
 });
+
+//topに戻る
+jQuery(function($){$(window).scroll(function(){
+        var distancetop = 10;
+        if($(this).scrollTop() > distancetop){
+            $('.pagetop').fadeIn(500);
+        }else{
+            $('.pagetop').fadeOut(500);
+        }
+    });
+});
+
    </script>
     </head>
 
@@ -43,20 +57,30 @@
 
 <!--ヘッダー-->
 
-<header class="js-float-menu">
+<header>
     <div class="container-maintitle">
-        <h1><a href="index2.php" >NF Plaza</a></h1>
+        <h1><a href="index.php" >NF Plaza</a></h1>
         <p>練馬高野台駅前の賃貸レジデンス</p>
-        <nav></nav>
+        <div id="nav-drawer">
+                <input id="nav-input" type="checkbox" class="nav-unshown">
+                <label id="nav-open" for="nav-input"><span></span></label>
+                <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                <div id="nav-content">ここに中身を入れる</div>
+            </div>
     </div>
+
+    
+
+
+
 </header>
 
 <!--メイン-->
 
 
-<section id="index" class="index">
+<section class="index">
  <div class="container-panels">
-        <div class="index-panel"><a href="index.html"><p>TOP</p></a></div>
+        <div class="index-panel" style='background-color:blue;' ><a href="index.html"><p style="color: white">TOP</p></a></div>
         <div class="index-panel"><a href="roomplan.html"><p>ROOM PLAN</p></a></div>
         <div class="index-panel"><a href="access.html"><p>ACCESS/LOCATION</p></a></div>
         <div class="index-panel"><a href="gallery.html"><p>GALLERY</p></a></div>
@@ -68,21 +92,14 @@
 </section>
     
     
-<section id="main">
+<section id="main" style='margin-top: 50px;'>
    <div class="container">
-       <h2 class="container-title"><span></span><br>
-       </h2>
        <div class='container__topimage'>
        <ul class='images bxslider'>
            <li class='main-image'><img src="asset/nfplaza.jpeg" alt="none"></li>
            <li class='main-image'><img src="asset/neritaka.jpg" alt="none"></li>
        </ul>
-         
-       <div class="custom-thumb">
-            <a data-slide-index="0" href="#"><img src="asset/nfplaza.jpeg" width="160px" height="100px" /></a>
-            <a data-slide-index="1" href="#"><img src="asset/neritaka.jpg" width="160px" height="100px" /></a>
-        </div>
-        
+
       </div>
       </div>
 </div>
@@ -92,16 +109,16 @@
 
 <div class='inner'>
     <div class='contact'>
-        <p style='font-size: 10px;'>お電話での問い合わせは<br>※※※※※※※※※※※まで<br>お気軽にお電話下さい。</p>
+        <p>お電話での問い合わせは<br>※※※※※※※※※まで<br>お気軽にお電話下さい。</p>
         <p> TEL ※※※-※※※※※-※※※※</p>
-        <p   style='font-size:20px; color:white; height:50px; width:120px; border:1px solid black; background-color: blue;'><span>空室情報</span></p>
+        <p   class='contact__vacant'><span>空室情報</span></p>
     </div>
 
 </div>
 
 <!-- top -->
 
-<div class="absolute_test">
+<div class="pagetop">
         <p>TOPへ</p>
 </div>
       
