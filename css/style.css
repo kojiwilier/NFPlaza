@@ -23,7 +23,7 @@ a:hover {
   transition: .3s; }
 
 img {
-  vertical-align: bottom;
+  vertical-align: middle;
   max-width: 100%; }
 
 .site-title {
@@ -65,48 +65,70 @@ header {
   display: inline-block;
   line-height: 50px;
   margin-right: 5px; }
+  .index-panel__sp {
+    display: block;
+    height: 20px; }
+  .index-panel p:hover {
+    background-color: #005FFF;
+    color: white; }
   .index-panel p {
     padding: 0 20px; }
-
-.main-image {
-  margin: 0 auto;
-  width: 90%; }
 
 .panel__roomplan-left {
   margin-bottom: 20px;
   padding: 0;
-  width: 404px;
   position: relative;
   margin-right: 20px;
-  text-align: center;
-  float: left; }
+  text-align: center; }
+  @media screen and (min-width: 641px) {
+    .panel__roomplan-left {
+      float: left;
+      width: 40%; } }
   .panel__roomplan-left li {
-    height: 100px;
+    max-height: 100px;
     margin-bottom: 20px;
     position: relative;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 100px;
-    background-color: gray; }
+    background-color: #EEEEEE; }
+    @media screen and (max-width: 641px) {
+      .panel__roomplan-left li {
+        font-size: 15px; } }
+  .panel__roomplan-left li:hover {
+    background-color: #005FFF; }
+    .panel__roomplan-left li:hover a {
+      color: white; }
 
-.panel__roomplan-right {
-  float: right; }
+@media screen and (min-width: 641px) {
+  .panel__roomplan-right {
+    float: right; } }
 
 .panel__gallery {
-  display: inline-block;
   height: 60px;
   margin-bottom: 20px;
   position: relative;
   font-size: 20px;
   line-height: 50px;
   background-color: #EEEEEE;
-  margin: 0 10px;
-  width: 170px; }
+  margin: 0 10px; }
+  @media screen and (max-width: 641px) {
+    .panel__gallery {
+      margin: 0 auto 10px;
+      width: 60%; } }
+  @media screen and (min-width: 641px) {
+    .panel__gallery {
+      width: 15%; } }
   .panel__gallery p {
     padding: 5px 20px; }
+  .panel__gallery p:hover {
+    background-color: #005FFF;
+    color: white; }
 
 .pagetop {
+  display: none;
   position: fixed;
-  background-color: blue;
+  background-color: #005FFF;
+  color: white;
   padding: 20px;
   left: 1100px;
   top: 500px;
@@ -118,18 +140,31 @@ header {
   .pagetop p {
     line-height: 80px; }
 
-.bx-wrapper .bx-pager a {
-  border: solid #ccc 1px;
-  display: block;
-  margin: 0 5px;
-  padding: 3px; }
+.main-image {
+  margin: 0 auto;
+  width: 90%; }
 
-.bx-wrapper .bx-pager a:hover,
-.bx-wrapper .bx-pager a.active {
-  border: solid #5280DD 1px; }
+body .bx-wrapper {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: transparent; }
 
-.bx-wrapper {
-  margin: 0 auto 50px; }
+.bxslider img {
+  margin: 0 auto;
+  display: block; }
+
+.bx-wrapper ul li {
+  display: flex; }
+
+.custom-thumb img {
+  width: 160px;
+  height: auto; }
+  @media screen and (max-width: 641px) {
+    .custom-thumb img {
+      width: 20%;
+      height: auto; } }
 
 .container {
   width: 100%;
@@ -144,30 +179,44 @@ header {
     display: flex;
     align-items: center; }
     @media screen and (max-width: 641px) {
-      .container-maintitle p {
+      .container-maintitle .maintitle__sub {
         display: none; } }
   .container-title {
+    color: #005FFF;
     text-align: center;
     font-size: 30px;
     margin: 40px auto; }
+    @media screen and (max-width: 641px) {
+      .container-title {
+        font-size: 25px; } }
   .container-panels {
-    text-align: center;
-    height: 50px; }
+    text-align: center; }
+    @media screen and (min-width: 641px) {
+      .container-panels {
+        display: flex;
+        justify-content: center; } }
   .container__topimage {
     margin: 0 auto; }
   .container__roomplan {
-    overflow: hidden;
-    width: 90%;
+    width: 75%;
     margin: 30px auto 50px; }
+    @media screen and (min-width: 641px) {
+      .container__roomplan {
+        overflow: hidden; } }
   .container__gallery {
     width: 100%;
     margin: 30px auto 0; }
-  .container__location {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .container__location img {
-      margin: 1px; }
+  @media screen and (min-width: 641px) {
+    .container__location {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .container__location img {
+    margin: 5px; }
+    @media screen and (min-width: 641px) {
+      .container__location img {
+        width: 500px;
+        height: 320px; } }
 
 .inner {
   background-image: url(../asset/backgroud.jpg); }
@@ -199,10 +248,10 @@ header {
       height: 50px;
       width: 120px;
       border: 1px solid black;
-      background-color: blue; }
+      background-color: #005FFF; }
 
 .content {
-  width: 980px;
+  width: 80%;
   margin: 0 auto;
   text-align: center; }
   .content__sub {
@@ -212,6 +261,10 @@ header {
       margin-left: 60%;
       margin-top: -30px;
       margin-bottom: 30px; }
+      @media screen and (max-width: 641px) {
+        .content__sub-rosen {
+          margin: 10px auto;
+          width: 100%; } }
 
 .sub-title {
   display: flex;
@@ -233,124 +286,146 @@ header {
   margin-left: .4em; }
 
 .rosen {
-  margin-top: 40px;
-  height: 500px; }
+  margin-top: 40px; }
+  .rosen img {
+    width: 760px;
+    height: auto; }
 
 .copy__main {
   font-size: 25px; }
+  @media screen and (max-width: 641px) {
+    .copy__main {
+      font-size: 15px; } }
 
 .copy__sub {
-  font-size: 10px; }
+  font-size: 5px; }
 
 tr {
-  border-bottom: 0.5px dashed gray;
-  height: 90px; }
+  border-bottom: 0.5px dashed #EEEEEE;
+  height: 60px; }
+  @media screen and (max-width: 641px) {
+    tr {
+      height: 50px;
+      font-size: 10px; } }
   tr td {
     vertical-align: middle; }
   tr th {
     vertical-align: middle;
-    width: 180px; }
+    width: 30%; }
 
-.form {
-  width: 60%; }
-  .form .input {
-    display: block;
-    margin-bottom: 10px;
-    border: 3px solid #f6f5f4;
-    border-radius: 4px;
-    outline: none;
-    height: 60px;
-    font-size: 15px;
-    color: #111;
-    box-sizing: border-box; }
-    .form .input-l {
-      width: 100%; }
-
-#nav-drawer {
-  position: relative;
-  margin-left: auto; }
-
-/*チェックボックス等は非表示に*/
-.nav-unshown {
-  display: none; }
-
-/*アイコンのスペース*/
-#nav-open {
-  display: inline-block;
-  width: 30px;
-  height: 22px;
-  vertical-align: middle; }
-
-/*ハンバーガーアイコンをCSSだけで表現*/
-#nav-open span, #nav-open span:before, #nav-open span:after {
-  position: absolute;
-  height: 3px;
-  /*線の太さ*/
-  width: 25px;
-  /*長さ*/
-  border-radius: 3px;
-  background: #555;
-  display: block;
-  content: '';
-  cursor: pointer; }
-
-#nav-open span:before {
-  bottom: -8px; }
-
-#nav-open span:after {
-  bottom: -16px; }
-
-/*閉じる用の薄黒カバー*/
-#nav-close {
-  display: none;
-  /*はじめは隠しておく*/
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  /*全体に広がるように*/
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0;
-  transition: .3s ease-in-out; }
-
-/*中身*/
-#nav-content {
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  /*最前面に*/
-  width: 90%;
-  /*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;
-  /*最大幅（調整してください）*/
-  height: 100%;
-  background: #fff;
-  /*背景色*/
-  transition: .3s ease-in-out;
-  /*滑らかに表示*/
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
-  /*左に隠しておく*/ }
-
-/*チェックが入ったらもろもろ表示*/
-#nav-input:checked ~ #nav-close {
-  display: block;
-  /*カバーを表示*/
-  opacity: .5; }
-
-#nav-input:checked ~ #nav-content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  /*中身を表示（右へスライド）*/
-  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15); }
+.googlemap iframe {
+  width: 80%;
+  height: 300px; }
 
 @media screen and (min-width: 641px) {
-  #nav-drawer {
-    display: none; } }
+  .googlemap {
+    position: relative;
+    width: 60%;
+    height: 0;
+    padding-top: 35%;
+    margin: 0 auto; }
+  .googlemap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; } }
+
+.navToggle {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 3;
+  background: #666;
+  text-align: center; }
+  @media screen and (min-width: 641px) {
+    .navToggle {
+      display: none; } }
+
+.navToggle span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  border-bottom: solid 3px #eee;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+  left: 6px; }
+
+.navToggle span:nth-child(1) {
+  top: 9px; }
+
+.navToggle span:nth-child(2) {
+  top: 18px; }
+
+.navToggle span:nth-child(3) {
+  top: 27px; }
+
+.navToggle span:nth-child(4) {
+  border: none;
+  color: #eee;
+  font-size: 9px;
+  font-weight: bold;
+  top: 34px; }
+
+/* 最初のspanをマイナス45度に */
+.navToggle.active span:nth-child(1) {
+  top: 18px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%; }
+
+nav.globalMenuSp ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%; }
+
+nav.globalMenuSp ul li {
+  font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px dotted #333; }
+
+/* 最後はラインを描かない */
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none; }
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #000;
+  padding: 1em 0; }
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  transform: translateY(0%); }
 
 footer {
   width: 100%;
@@ -381,6 +456,8 @@ footer {
       box-sizing: border-box;
       line-height: 1;
       padding: 10px 0; } }
+  .fnav li:hover {
+    text-decoration: underline; }
   @media screen and (max-width: 641px) {
     .fnav li:nth-child(odd) {
       border-right: solid 1px #ccc;

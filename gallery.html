@@ -17,17 +17,18 @@
    <link rel="stylesheet" href="./node_modules/bxslider/dist/jquery.bxslider.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script src="./node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
-   
+
 
    <script>
         jQuery(function($){$(document).ready(function(){
-          $('.bxslider').bxSlider({slideWidth: 500, 
+          $('.bxslider').bxSlider({
           mode: 'fade',
           auto: true,
           pause:3000,
           speed: 3000,
           adaptiveHeight: true,
-          pagerCustom: '.custom-thumb' });
+          pagerCustom: '.custom-thumb',
+          responsive: true });
         });
        });
 
@@ -83,7 +84,7 @@
      </div>
 
      <div class='container__gallery'>
-            <ul class='images bxslider'>
+            <ul class='images bxslider '>
                 <li class='main-image'><img src="asset/room-kitchen.jpeg" alt="none"></li>
                 <li class='main-image'><img src="asset/room-senmen.jpeg" alt="none"></li>
                 <li class='main-image'><img src="asset/room-wasitsu.jpeg" alt="none"></li>
@@ -92,10 +93,10 @@
               
 
             <div class="custom-thumb">
-                    <a data-slide-index="0" href="#"><img src="asset/room-kitchen.jpeg" width="160px" height="100px" /></a>
-                    <a data-slide-index="1" href="#"><img src="asset/room-senmen.jpeg" width="160px" height="100px" /></a>
-                    <a data-slide-index="2" href="#"><img src="asset/room-wasitsu.jpeg" width="160px" height="100px" /></a>
-                    <a data-slide-index="3" href="#"><img src="asset/room-yoshitsu.jpeg" width="160px" height="100px" /></a>
+                    <a data-slide-index="0" href="#"><img src="asset/room-kitchen.jpeg"  /></a>
+                    <a data-slide-index="1" href="#"><img src="asset/room-senmen.jpeg"  /></a>
+                    <a data-slide-index="2" href="#"><img src="asset/room-wasitsu.jpeg"  /></a>
+                    <a data-slide-index="3" href="#"><img src="asset/room-yoshitsu.jpeg"  /></a>
                 </div>
              
            </div>

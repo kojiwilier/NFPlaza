@@ -27,7 +27,6 @@
        pause:3000,
        speed: 3000,
        adaptiveHeight: true,
-       pagerCustom: '.custom-thumb',
        responsive: true });
      });
     });
@@ -48,6 +47,18 @@ jQuery(function($){$(window).scroll(function(){
     });
 });
 
+$(function() {
+    $('.navToggle').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+
    </script>
     </head>
 
@@ -60,19 +71,11 @@ jQuery(function($){$(window).scroll(function(){
 <header>
     <div class="container-maintitle">
         <h1><a href="index.php" >NF Plaza</a></h1>
-        <p>練馬高野台駅前の賃貸レジデンス</p>
-        <div id="nav-drawer">
-                <input id="nav-input" type="checkbox" class="nav-unshown">
-                <label id="nav-open" for="nav-input"><span></span></label>
-                <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-                <div id="nav-content">ここに中身を入れる</div>
+        <p class='maintitle__sub' >練馬高野台駅前の賃貸レジデンス</p>
+        <div class="navToggle">
+                <span></span><span></span><span></span>
             </div>
     </div>
-
-    
-
-
-
 </header>
 
 <!--メイン-->
@@ -80,24 +83,36 @@ jQuery(function($){$(window).scroll(function(){
 
 <section class="index">
  <div class="container-panels">
-        <div class="index-panel" style='background-color:blue;' ><a href="index.html"><p style="color: white">TOP</p></a></div>
+        <div class="index-panel" style='background-color:#005FFF;' ><a href="index.html"><p style="color: white">TOP</p></a></div>
         <div class="index-panel"><a href="roomplan.html"><p>ROOM PLAN</p></a></div>
         <div class="index-panel"><a href="access.html"><p>ACCESS/LOCATION</p></a></div>
         <div class="index-panel"><a href="gallery.html"><p>GALLERY</p></a></div>
         <div class="index-panel"><a href="outline.html"><p>OUTLINE</p></a></div>
         <div class="index-panel"><a href="map.html"><p>MAP</p></a></div>
- </div>
-                        
+ </div> 
+ 
+ <nav class="globalMenuSp">
+        <ul>
+            <li><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+            <li><a href="#">Menu4</a></li>
+            <li><a href="#">Menu5</a></li>
+        </ul>
+    </nav>
+ 
     
 </section>
+
+
     
     
 <section id="main" style='margin-top: 50px;'>
    <div class="container">
        <div class='container__topimage'>
        <ul class='images bxslider'>
-           <li class='main-image'><img src="asset/nfplaza.jpeg" alt="none"></li>
-           <li class='main-image'><img src="asset/neritaka.jpg" alt="none"></li>
+           <li class='main-image'><img src="asset/nfplaza.jpeg" alt="none" width="1000"></li>
+           <li class='main-image'><img src="asset/neritaka.jpg" alt="none" width="1000"></li>
        </ul>
 
       </div>
